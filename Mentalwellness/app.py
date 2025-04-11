@@ -1,11 +1,6 @@
 from dotenv import load_dotenv
 import os
 import streamlit as st
-st.set_page_config(
-    page_title="NeuroSense",
-    
-    layout="centered"
-)
 import random
 import requests
 from googleapiclient.discovery import build
@@ -14,8 +9,17 @@ load_dotenv()
 
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
-GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
-GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
+#GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
+#GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
+
+if not COHERE_API_KEY or not YOUTUBE_API_KEY:
+    st.error("Missing API Keys. Please ensure your .env file contains both COHERE_API_KEY and YOUTUBE_API_KEY.")
+    st.stop()
+    
+st.set_page_config(
+    page_title="NeuroSense",
+    layout="centered"
+)
 
 
 # CSS styles
