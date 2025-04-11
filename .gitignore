@@ -1,0 +1,23 @@
+# Ignore Python virtual environment
+env/
+.venv/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files and temp files
+*.log
+*.tmp
+
+emotive_env/
+
+emotive_env/
+
+*.dll
+*.lib
+
+.env

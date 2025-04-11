@@ -1,0 +1,14 @@
+/* 
+body {
+    background-color: white !important;
+    color: black !important;
+}
+
+section.main {
+    background-color: white !important;
+}
+
+html, body, [class*="css"] {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+} */
